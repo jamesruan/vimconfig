@@ -3,9 +3,8 @@ need:
 - Exuberant ctags 5.5
 
 ```bash
-    mv vim ~/.vim
-    mv vimrc ~/.vimrc
-    cd ~/.vim/
-    git submodule init
-    git submodule update
+git submodule init
+git submodule update
+cp -rf vim ~/.vim
+cp -f vimrc ~/.vimrc
 ```
