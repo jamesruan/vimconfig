@@ -1,0 +1,12 @@
+[submodule "vim/nerdtree"]
+	path = vim/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/tagbar"]
+	path = vim/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/vim-airline"]
+	path = vim/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/vim-airline-themes"]
+	path = vim/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
