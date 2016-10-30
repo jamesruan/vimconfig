@@ -46,5 +46,11 @@ let g:tagbar_type_go = {
 \ }
 
 nmap <C-n> :NERDTreeToggle<CR>
+autocmd FileType javascript set ts=4
+autocmd FileType javascript set sw=4
+autocmd FileType coffeescript set ts=4
+autocmd FileType coffeescript set sw=4
+autocmd FileType html set ts=4
+autocmd FileType html set sw=4
 autocmd FileType go set makeprg=go\ build
 autocmd QuickFixCmdPost *make* cwindow
