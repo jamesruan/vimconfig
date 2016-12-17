@@ -1,11 +1,11 @@
-call pathogen#infect()
+execute pathogen#infect()
 syntax on
 set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
-set shiftwidth=8
-set tabstop=8
+set shiftwidth=4
+set tabstop=4
 set ruler
 set laststatus=2
 set list lcs=tab:»\ ,trail:·
@@ -45,12 +45,22 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" syntastics
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" vim-coffee-script
+filetype plugin indent on
+
 nmap <C-n> :NERDTreeToggle<CR>
-autocmd FileType javascript set ts=4
-autocmd FileType javascript set sw=4
-autocmd FileType coffeescript set ts=4
-autocmd FileType coffeescript set sw=4
-autocmd FileType html set ts=4
-autocmd FileType html set sw=4
 autocmd FileType go set makeprg=go\ build
 autocmd QuickFixCmdPost *make* cwindow
+autocmd FileType elm nnoremap <leader>el :ElmEvalLine<CR>
+autocmd FileType elm vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+autocmd FileType elm nnoremap <leader>em :ElmMakeCurrentFile<CR>
