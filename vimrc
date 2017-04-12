@@ -61,3 +61,5 @@ filetype plugin indent on
 nmap <C-n> :NERDTreeToggle<CR>
 autocmd FileType go set makeprg=go\ build
 autocmd QuickFixCmdPost *make* cwindow
+
+let g:plantuml_executable_script = 'plantuml -tsvg'
