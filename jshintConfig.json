@@ -1,0 +1,14 @@
+{
+  "jshintConfig": {
+    "esversion": 6,
+    "maxerr": 5,
+    "browser": true,
+    "node": true,
+    "strict": true,
+    "asi": true,
+    "eqnull": true,
+    "unused": "vars",
+    "undef": true,
+    "varstmt": true
+  }
+}

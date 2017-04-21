@@ -8,3 +8,4 @@ git submodule update
 cp -rf vim ~/.vim
 cp -f vimrc ~/.vimrc
 ```
+add jshintConfig to package.json
