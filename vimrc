@@ -65,6 +65,8 @@ autocmd FileType go let g:go_info_mode = 'guru'
 autocmd FileType go let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
 autocmd QuickFixCmdPost *make* cwindow
 
+autocmd FileType erlang set expandtab
+
 autocmd FileType javascript set expandtab
 let g:syntastic_javascript_checkers = ['eslint']
 
