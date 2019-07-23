@@ -59,9 +59,6 @@ let g:syntastic_check_on_wq = 0
 filetype plugin indent on
 
 nmap <C-n> :NERDTreeToggle<CR>
-autocmd FileType go set makeprg=go\ build
-autocmd FileType go let g:go_info_mode = 'guru'
-autocmd FileType go let g:syntastic_go_checkers = ['gotype', 'govet', 'gofmt']
 autocmd QuickFixCmdPost *make* cwindow
 
 autocmd FileType erlang set expandtab
