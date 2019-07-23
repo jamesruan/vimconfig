@@ -9,6 +9,7 @@ set tabstop=4
 set ruler
 set laststatus=2
 set list lcs=tab:»\ ,trail:·
+set completeopt=menu
 
 let g:molokai_original = 1
 let g:airline_theme='molokai'
@@ -54,6 +55,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " vim-coffee-script
 filetype plugin indent on
@@ -62,6 +65,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 autocmd QuickFixCmdPost *make* cwindow
 
 autocmd FileType erlang set expandtab
+autocmd FileType go let g:syntastic_go_checkers =['gotype', 'vet', 'gofmt']
 
 autocmd FileType javascript set expandtab
 let g:syntastic_javascript_checkers = ['eslint']
