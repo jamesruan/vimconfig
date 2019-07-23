@@ -54,7 +54,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'govet']
 
 " vim-coffee-script
 filetype plugin indent on
@@ -62,7 +61,7 @@ filetype plugin indent on
 nmap <C-n> :NERDTreeToggle<CR>
 autocmd FileType go set makeprg=go\ build
 autocmd FileType go let g:go_info_mode = 'guru'
-autocmd FileType go let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
+autocmd FileType go let g:syntastic_go_checkers = ['gotype', 'govet', 'gofmt']
 autocmd QuickFixCmdPost *make* cwindow
 
 autocmd FileType erlang set expandtab
