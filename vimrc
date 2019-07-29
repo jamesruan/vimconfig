@@ -68,7 +68,7 @@ autocmd FileType erlang set expandtab
 autocmd FileType go let g:syntastic_go_checkers =['gotype', 'vet', 'gofmt']
 
 autocmd FileType javascript set expandtab
-let g:syntastic_javascript_checkers = ['eslint']
+autocmd FileType javascript let g:javascript_plugin_flow = 1
 
 let g:plantuml_executable_script = 'plantuml -tsvg'
 

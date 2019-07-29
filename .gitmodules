@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-obsession"]
 	path = vim/bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
