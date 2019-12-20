@@ -1,5 +1,18 @@
 execute pathogen#infect()
-syntax on
+
+" plug.vim
+let g:plug_timeout=180
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'fatih/vim-go'
+call plug#end()
+
 set noexpandtab
 set copyindent
 set preserveindent
@@ -58,10 +71,6 @@ let g:syntastic_check_on_wq = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
-" vim-coffee-script
-filetype plugin indent on
-
-nmap <C-n> :NERDTreeToggle<CR>
 autocmd QuickFixCmdPost *make* cwindow
 
 autocmd FileType erlang set expandtab
@@ -72,3 +81,13 @@ autocmd FileType javascript let g:javascript_plugin_flow = 1
 
 let g:plantuml_executable_script = 'plantuml -tsvg'
 
+nmap <C-n> :NERDTreeToggle<CR>
+
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'c': ['/usr/bin/clangd'],
+    \ 'cpp': ['/usr/bin/clangd'],
+    \ }
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
